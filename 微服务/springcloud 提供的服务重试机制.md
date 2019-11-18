@@ -13,6 +13,8 @@
 
 ## ribbon的能力
 
+官网：<https://github.com/Netflix/ribbon>
+
 <https://blog.csdn.net/qq_41907991/article/details/90418729>
 
 ```bash
@@ -41,4 +43,31 @@ ribbon:
     enabled: true
     #指定需要关闭懒加载的服务名
     clients: eureka-client
+```
+
+官方说明文档： <https://github.com/Netflix/ribbon/wiki/Getting-Started#the-properties-file-sample-clientproperties>
+
+```md
+The properties file (sample-client.properties)
+
+# Max number of retries on the same server (excluding the first try)
+sample-client.ribbon.MaxAutoRetries=1
+
+# Max number of next servers to retry (excluding the first server)
+sample-client.ribbon.MaxAutoRetriesNextServer=1
+
+# Whether all operations can be retried for this client
+sample-client.ribbon.OkToRetryOnAllOperations=true
+
+# Interval to refresh the server list from the source
+sample-client.ribbon.ServerListRefreshInterval=2000
+
+# Connect timeout used by Apache HttpClient
+sample-client.ribbon.ConnectTimeout=3000
+
+# Read timeout used by Apache HttpClient
+sample-client.ribbon.ReadTimeout=3000
+
+# Initial list of servers, can be changed via Archaius dynamic property at runtime
+sample-client.ribbon.listOfServers=www.microsoft.com:80,www.yahoo.com:80,www.google.com:80
 ```
