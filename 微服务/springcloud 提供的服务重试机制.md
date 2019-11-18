@@ -13,7 +13,7 @@
 
 ## ribbon的能力
 
-https://blog.csdn.net/qq_41907991/article/details/90418729
+<https://blog.csdn.net/qq_41907991/article/details/90418729>
 
 ```bash
 ribbon:
